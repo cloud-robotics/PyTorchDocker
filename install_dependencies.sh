@@ -16,6 +16,10 @@ apt install --no-install-recommends \
   apt-utils \
   usbutils \
   dialog \
-  python-pip
+  python-pip \
+  python-dev
 
 pip install -U pip setuptools
+
+apt-get -y install ipython ipython-notebook
+pip install jupyter
