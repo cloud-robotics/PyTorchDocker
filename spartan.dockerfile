@@ -22,6 +22,12 @@ WORKDIR /home/$USER_NAME
 COPY ./install_dependencies.sh /tmp/install_dependencies.sh
 RUN yes "Y" | /tmp/install_dependencies.sh
 
+COPY ./install_pytorch.sh /tmp/install_pytorch.sh
+RUN yes "Y" | /tmp/install_pytorch.sh
+
+COPY ./install_more.sh /tmp/install_more.sh
+RUN yes "Y" | /tmp/install_more.sh
+
 # set the terminator inside the docker container to be a different color
 RUN mkdir -p .config/terminator
 COPY ./terminator_config .config/terminator/config
