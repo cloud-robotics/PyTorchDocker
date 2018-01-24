@@ -19,6 +19,9 @@ WORKDIR /home/$USER_NAME
 # require no sudo pw in docker
 # RUN echo $USER_PASSWORD | sudo -S bash -c 'echo "'$USER_NAME' ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/docker-user' && printf "\n"
 
+COPY ./install_dependencies.sh /tmp/install_dependencies.sh
+RUN yes "Y" | /tmp/install_dependencies.sh
+
 # set the terminator inside the docker container to be a different color
 RUN mkdir -p .config/terminator
 COPY ./terminator_config .config/terminator/config

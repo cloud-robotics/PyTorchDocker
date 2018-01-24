@@ -6,7 +6,7 @@ apt-get update
 apt install --no-install-recommends \
   terminator \
   tmux \
-  nano \
+  vim \
   gedit \
   git \
   openssh-client \
@@ -19,6 +19,3 @@ apt install --no-install-recommends \
   python-pip
 
 pip install -U pip setuptools
-
-# Dependencies of trimesh
-pip install numpy scipy pyassimp pyglet
