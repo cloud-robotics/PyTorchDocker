@@ -36,6 +36,7 @@ if __name__=="__main__":
 	cmd += " -v %(source_dir)s:%(home_directory)s "  \
 		% {'source_dir': source_dir, 'home_directory': home_directory}	            # mount source
 	cmd += " -v ~/.ssh:%(home_directory)s/.ssh " % {'home_directory': home_directory}   # mount ssh keys
+	cmd += " -v /media:/media " #mount media
 
 	cmd += " --user %s " % user_name                                                    # login as current user
 
