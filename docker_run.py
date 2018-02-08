@@ -42,6 +42,7 @@ if __name__=="__main__":
 
 	# expose UDP ports
 	cmd += " -p 8888:8888 "
+        cmd += " --ipc=host "
 
 	cmd += " " + args.passthrough + " "
 
