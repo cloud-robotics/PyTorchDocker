@@ -9,3 +9,5 @@ sudo pip install imageio
 
 sudo pip install scikit-image
 sudo pip install tensorboard
+
+sudo pip install sklearn
